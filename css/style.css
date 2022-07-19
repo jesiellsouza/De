@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2? family= Lato:wght@400;700;900 & family= Roboto:wght@100;300;400;700 & display=swap' );
 
+@font-face {
+    font-family: 'Ananda';
+    src: url(../fonts/Ananda\ Black\ Personal\ Use.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -51,10 +56,22 @@ body {
 /*final-navbar*/
 
 .img-topo {
-    display: flex;
     width: 100%;
-    height: auto;
-    background-attachment: fixed;
+    height: 600px;
+    background-size: cover;
+    background-position: bottom;
     background-image: url(../img/img-topo.png);
     background-repeat: no-repeat;
+}
+
+.sobre-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.sobre-content h3 {
+    font-family: 'Ananda';
+    font-size: 35px;
 }
