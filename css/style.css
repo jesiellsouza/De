@@ -9,6 +9,7 @@
 
 body {
     background-color: gray;
+    width: 100%;
 }
 
 /*inicio-navbar*/
@@ -48,3 +49,12 @@ body {
     border-radius: 10px;
 }
 /*final-navbar*/
+
+.img-topo {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    background-image: url(../img/img-topo.png);
+    background-repeat: no-repeat;
+}
