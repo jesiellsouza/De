@@ -1,78 +1,111 @@
-@import url('https://fonts.googleapis.com/css2? family= Lato:wght@400;700;900 & family= Roboto:wght@100;300;400;700 & display=swap' );
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&display=swap');
 
-@font-face {
-    font-family: 'Ananda';
-    src: url(../fonts/Ananda\ Black\ Personal\ Use.ttf);
-}
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: gray;
-    width: 100%;
+    overflow-x: hidden;
+    background-color: gainsboro;
 }
 
-/*inicio-navbar*/
-.navbar-content {
+.logo img{
+    width: 120px;
+}
+
+nav {
     display: flex;
-    width: 100%;
-    padding: 10px;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffcc00;
+    font-family: 'Lato', sans-serif;
+    background: #eeb600;
+    height: 17vh;
+    padding: 10px;
     border-bottom: 5px solid white;
-    flex-wrap: wrap;
 }
 
-.navbar-logo img {
-    width: 170px;
-}
-
-.navbar-links {
+.nav-list {
+    list-style: none;
     display: flex;
-    gap: 10px;
 }
 
-.navbar-links a {
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.nav-list li a {
     display: flex;
-    padding: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
     color: black;
-    transition: 0.5s;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+    transition: 0.4s;
 }
 
-.navbar-links a:hover {
+.nav-list li a:hover {
+    opacity: 0.7;
+    
+}
+
+/*inicio-hamburguer*/
+.mobile-menu {
+    display: none;
     cursor: pointer;
-    background-color: white;
-    border-radius: 10px;
 }
-/*final-navbar*/
 
-.img-topo {
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: black;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+/*final-hamburguer*/
+
+/*img-principal*/
+.img-principal {
+    display: flex;
     width: 100%;
 }
 
-.img-topo img {
-    display: flex;
+.img-principal img {
     width: 100%;
     object-fit: cover;
 }
+/*fim-img*/
 
-.sobre-title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-}
-
-.sobre-title h3 {
-    font-family: 'Ananda';
-    font-size: 35px;
-}
